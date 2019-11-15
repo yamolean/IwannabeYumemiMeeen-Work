@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    @IBOutlet private weak var resultLabel: UILabel!
+    @IBOutlet private weak var inputTextField: UITextField!
+    @IBOutlet private weak var sendButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
 
