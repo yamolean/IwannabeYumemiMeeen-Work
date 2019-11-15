@@ -10,6 +10,8 @@ import Foundation
 
 struct Api {
     
+    // 参考URL
+    // https://labs.goo.ne.jp/api/jp/hiragana-translation/
     static func convertToHiragana(hiragana: String, onSuccess: @escaping(Response) -> Void, onError: @escaping(String) -> Void) {
         let url = URL(string: "https://labs.goo.ne.jp/api/hiragana")!
         var request = URLRequest(url: url)
