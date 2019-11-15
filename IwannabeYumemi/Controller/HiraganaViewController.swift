@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HiraganaViewController.swift
 //  IwannabeYumemi
 //
 //  Created by 矢守叡 on 2019/11/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class HiraganaViewController: UIViewController {
 
     @IBOutlet private weak var resultLabel: UILabel!
     @IBOutlet private weak var inputTextField: UITextField!
