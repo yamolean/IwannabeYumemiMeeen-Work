@@ -13,13 +13,14 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var resultLabel: UILabel!
     @IBOutlet private weak var inputTextField: UITextField!
     @IBOutlet private weak var sendButton: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
  
     @IBAction private func sendButtonTapped(_ sender: UIButton) {
-        Api.convertToHiragana(hiragana: inputTextField.text ?? "") { [weak self] respose in
+        guard let text = inputTextField.text, !text.isEmpty else {
+            resultLabel.text = "漢字を入力して下さい"
+            return
+        }
+        
+        Api.convertToHiragana(hiragana: text) { [weak self] respose in
             self?.resultLabel.text = respose.hiragana
         }
     }
