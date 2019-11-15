@@ -15,6 +15,7 @@
 		182D8C79237EF4C1005FB358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182D8C77237EF4C1005FB358 /* LaunchScreen.storyboard */; };
 		182D8C81237EF9B1005FB358 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D8C80237EF9B1005FB358 /* Response.swift */; };
 		182D8C83237EFBE8005FB358 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D8C82237EFBE8005FB358 /* Api.swift */; };
+		182D8C89237F115F005FB358 /* AnimationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182D8C88237F115F005FB358 /* AnimationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		182D8C7A237EF4C1005FB358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182D8C80237EF9B1005FB358 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		182D8C82237EFBE8005FB358 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		182D8C88237F115F005FB358 /* AnimationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				182D8C85237F0EE8005FB358 /* View */,
 				182D8C86237F0F0B005FB358 /* Controller */,
 				182D8C6C237EF4BF005FB358 /* AppDelegate.swift */,
+				182D8C88237F115F005FB358 /* AnimationButton.swift */,
 				182D8C6E237EF4BF005FB358 /* SceneDelegate.swift */,
 				182D8C75237EF4C1005FB358 /* Assets.xcassets */,
 				182D8C77237EF4C1005FB358 /* LaunchScreen.storyboard */,
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182D8C89237F115F005FB358 /* AnimationButton.swift in Sources */,
 				182D8C81237EF9B1005FB358 /* Response.swift in Sources */,
 				182D8C71237EF4BF005FB358 /* HiraganaViewController.swift in Sources */,
 				182D8C6D237EF4BF005FB358 /* AppDelegate.swift in Sources */,
