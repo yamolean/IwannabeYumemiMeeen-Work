@@ -19,6 +19,9 @@ final class ViewController: UIViewController {
     }
  
     @IBAction private func sendButtonTapped(_ sender: UIButton) {
+        Api.convertToHiragana(hiragana: inputTextField.text ?? "") { [weak self] respose in
+            self?.resultLabel.text = respose.hiragana
+        }
     }
 }
 
