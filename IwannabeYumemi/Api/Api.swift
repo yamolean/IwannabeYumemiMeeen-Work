@@ -12,10 +12,13 @@ struct Api {
     
     // 参考URL
     // https://labs.goo.ne.jp/api/jp/hiragana-translation/
+    
+    //escapingは値を返す呪文
     static func convertToHiragana(hiragana: String, onSuccess: @escaping(Response) -> Void, onError: @escaping(String) -> Void) {
         let url = URL(string: "https://labs.goo.ne.jp/api/hiragana")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        //Header
         request.allHTTPHeaderFields = ["Content-Type" : "application/json"]
         
         let parameters = [
@@ -24,21 +27,28 @@ struct Api {
              "output_type": "hiragana"
         ]
         
+        //リクエストんのbodyにパラメーターを入れてる
         request.httpBody = try! JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data, let response = response {
                 print(response)
                 do {
+                    //返ってきたdataをResponseにパース
                     let model = try JSONDecoder().decode(Response.self, from: data)
+                    //メインスレッドで実行
                     DispatchQueue.main.async {
                         onSuccess(model)
                     }
                 } catch let errorMessage {
-                    onError(errorMessage.localizedDescription)
+                    DispatchQueue.main.async {
+                        onError(errorMessage.localizedDescription)
+                    }
                 }
             } else {
-                onError(error?.localizedDescription ?? "エラーです")
+                DispatchQueue.main.async {
+                    onError(error?.localizedDescription ?? "エラーです")
+                }
             }
             
         }.resume()

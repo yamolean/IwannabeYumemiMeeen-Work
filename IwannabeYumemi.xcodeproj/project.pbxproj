@@ -68,6 +68,7 @@
 				182D8C85237F0EE8005FB358 /* View */,
 				182D8C86237F0F0B005FB358 /* Controller */,
 				182D8C6C237EF4BF005FB358 /* AppDelegate.swift */,
+				182D8C7A237EF4C1005FB358 /* Info.plist */,
 				182D8C6E237EF4BF005FB358 /* SceneDelegate.swift */,
 			);
 			path = IwannabeYumemi;
@@ -111,7 +112,6 @@
 			children = (
 				182D8C75237EF4C1005FB358 /* Assets.xcassets */,
 				182D8C77237EF4C1005FB358 /* LaunchScreen.storyboard */,
-				182D8C7A237EF4C1005FB358 /* Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";

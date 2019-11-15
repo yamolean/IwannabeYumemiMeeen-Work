@@ -20,6 +20,7 @@ final class HiraganaViewController: UIViewController {
             return
         }
         
+        //循環参照はダメ
         Api.convertToHiragana(hiragana: text, onSuccess: { [weak self] response in
             // 成功
             self?.resultLabel.text = response.hiragana

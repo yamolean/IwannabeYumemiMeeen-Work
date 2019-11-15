@@ -34,7 +34,7 @@
                                 <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9oz-QH-obr"/>
-                                    <constraint firstAttribute="width" constant="200" id="C9l-uH-ntz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="C9l-uH-ntz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <state key="normal" title="変換">
