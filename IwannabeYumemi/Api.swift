@@ -10,7 +10,7 @@ import Foundation
 
 struct Api {
     
-    static func convertToHiragana(hiragana: String, comletion: @escaping (Response) -> Void) {
+    static func convertToHiragana(hiragana: String, onSuccess: @escaping(Response) -> Void, onError: @escaping(String) -> Void) {
         let url = URL(string: "https://labs.goo.ne.jp/api/hiragana")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -30,13 +30,13 @@ struct Api {
                 do {
                     let model = try JSONDecoder().decode(Response.self, from: data)
                     DispatchQueue.main.async {
-                        comletion(model)
+                        onSuccess(model)
                     }
-                } catch {
-                    print("Serialize Error")
+                } catch let errorMessage {
+                    onError(errorMessage.localizedDescription)
                 }
             } else {
-                print(error ?? "Error")
+                onError(error?.localizedDescription ?? "エラーです")
             }
             
         }.resume()

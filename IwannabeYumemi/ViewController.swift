@@ -20,8 +20,13 @@ final class ViewController: UIViewController {
             return
         }
         
-        Api.convertToHiragana(hiragana: text) { [weak self] respose in
-            self?.resultLabel.text = respose.hiragana
+        Api.convertToHiragana(hiragana: text, onSuccess: { [weak self] response in
+            // 成功
+            self?.resultLabel.text = response.hiragana
+            
+        }) { [weak self] errorMessage in
+            // エラー
+            self?.resultLabel.text = errorMessage
         }
     }
 }
