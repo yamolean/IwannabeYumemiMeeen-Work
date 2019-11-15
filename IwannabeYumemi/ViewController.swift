@@ -17,5 +17,8 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+ 
+    @IBAction private func sendButtonTapped(_ sender: UIButton) {
+    }
 }
 
